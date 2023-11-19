@@ -1,0 +1,89 @@
+<div id="outPopUp" class="">
+  <div class="" style="padding-top: 2rem">
+    <!--to show error alert-->
+    <div
+      *ngIf="errormsg"
+      class="alert alert-danger alert-dismissible fade show"
+      role="alert"
+    >
+      <strong>{{ errormsg }}</strong>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+
+    <!--to show success alert-->
+    <div
+      *ngIf="successmsg"
+      class="alert alert-success alert-dismissible fade show"
+      role="alert"
+    >
+      <strong>{{ successmsg }}</strong>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+    <br /><br />
+    <div align="center">
+      <h1>Update Vehicle information</h1>
+      <p>
+        <strong>*important* Please make sure all information correct</strong>
+      </p>
+      <br /><br />
+      <form [formGroup]="vehicleForm">
+        <br />
+        <div class="col-lg-4 mx-auto">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="vehicleName"
+            placeholder="Vehicle Name"
+          />
+        </div>
+        <br />
+        <div class="col-lg-4 mx-auto">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="vehiclePlatNo"
+            placeholder="Vehicle PlatNo"
+          />
+        </div>
+        <br />
+        <div class="col-lg-4 mx-auto">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="vehicleStatus"
+            placeholder="Vehicle Status"
+          />
+        </div>
+        <br />
+        <div class="col-lg-4 mx-auto">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="vehicleDriver"
+            placeholder="Vehicle Driver"
+          />
+        </div>
+        <br />
+
+        <div
+          align="center"
+          class="col-lg-15 mt-2"
+          *ngIf="!getparamid"
+          (click)="vehicleUpdate()"
+        >
+          <button type="button" class="btn btn-danger">Confirm Update</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

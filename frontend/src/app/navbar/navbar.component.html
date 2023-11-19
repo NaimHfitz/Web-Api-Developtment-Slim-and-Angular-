@@ -1,0 +1,99 @@
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">VMS</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarColor01"
+      aria-controls="navbarColor01"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse pl-5" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            routerLink="/home"
+            routerLinkActive="active"
+            >Home
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            data-bs-toggle="dropdown"
+            href="#"
+            role="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+            >View</a
+          >
+          <div class="dropdown-menu">
+            <a
+              class="dropdown-item"
+              routerLink="/viewdriver"
+              routerLinkActive="active"
+              >Driver Record
+              <span class="visually-hidden">(current)</span>
+            </a>
+            <a
+              class="dropdown-item"
+              routerLink="/viewvehicle"
+              routerLinkActive="active"
+              >Vehicle Record
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            data-bs-toggle="dropdown"
+            href="#"
+            role="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+            >Add</a
+          >
+          <div class="dropdown-menu">
+            <a
+              class="dropdown-item"
+              routerLink="/adddriver"
+              routerLinkActive="active"
+              >Add Driver
+              <span class="visually-hidden">(current)</span>
+            </a>
+            <a
+              class="dropdown-item"
+              routerLink="/addvehicle"
+              routerLinkActive="active"
+              >Add Vehicle
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            routerLink="/aboutus"
+            routerLinkActive="active"
+            >About Us
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/faq" routerLinkActive="active"
+            >FAQ
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

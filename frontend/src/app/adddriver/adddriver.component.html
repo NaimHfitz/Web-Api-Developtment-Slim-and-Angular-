@@ -1,0 +1,80 @@
+<div id="outPopUp" class="">
+  <div class="container" style="padding-top: 2rem">
+    <!--to show error alert-->
+    <div
+      *ngIf="errormsg"
+      class="alert alert-danger alert-dismissible fade show"
+      role="alert"
+    >
+      <strong>{{ errormsg }}</strong>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+
+    <!--to show success alert-->
+    <div
+      *ngIf="successmsg"
+      class="alert alert-success alert-dismissible fade show"
+      role="alert"
+    >
+      <strong>{{ successmsg }}</strong>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+    <br /><br />
+    <div align="center">
+      <h1>Add Driver information</h1>
+      <p>
+        <strong>*important* Please make sure all information correct</strong>
+      </p>
+      <br /><br />
+      <form [formGroup]="driverForm">
+        <br />
+        <div class="col-lg-4 mx-auto">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="driverName"
+            placeholder="Driver Name"
+          />
+        </div>
+        <br />
+        <div class="col-lg-4 mx-auto">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="driverIC"
+            placeholder="Driver IC"
+          />
+        </div>
+        <br />
+        <div class="col-lg-4 mx-auto">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="driverPhone"
+            placeholder="Driver Phone Number"
+          />
+        </div>
+        <br />
+        <br />
+        <div
+          align="center"
+          class="col-lg-15 mt-2"
+          *ngIf="!getparamid"
+          (click)="driverSubmit()"
+        >
+          <button type="button" class="btn btn-warning">Add driver</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
